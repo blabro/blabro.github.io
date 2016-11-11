@@ -1,0 +1,45 @@
+html {
+  background-color: rgb(20, 22, 47);
+}
+
+body {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+img {
+  display: block;
+  margin: auto;
+  border-radius: 8px;
+  width: 100%;
+}
+#moje {
+  display: block;
+  margin: 10%;
+  border-radius: 8px;
+  width: 20%;
+  float: right;
+
+}
+.header {
+ padding: 15px;
+ font-size: 38px;
+ position: absolute;
+ top: 50%;
+ left: 10%;
+ width: 100%;
+
+}
+
+.container {
+  width: 100%;
+  float: left;
+  margin: auto;
+}
+
+.cv {
+  padding: 10%;
+  font-size: 26px;
+  font-weight: lighter;
+
+}
