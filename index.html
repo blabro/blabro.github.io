@@ -5,29 +5,36 @@
     <title>Broncel Błażej a nie index.html</title>
     <link href="css/main.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script data-require="jquery@2.0.1" data-semver="2.0.1" src="http://code.jquery.com/jquery-2.0.1.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+    <style>
+    .parallax {
+        /* The image used */
+        background-image: url("img/tlostrony.jpg");
 
+        /* Set a specific height */
+        min-height: 800px;
 
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    </style>
   </head>
 
-  <body>
-    
+  <body ng-app="myApp">
+    <script src="js/app.js"></script>
     <ul>
-
       <li><a href="#c">C++</a></li>
       <li><a href="#js">JavaScript</a></li>
       <li><a href="#oop">C++ OOP</a></li>
       <li><a href="#angular">Angular</a></li>
-      <li><a href="http://onet.pl" >Surprise</a></li>
+      <li style="float:right" ><a href="http://onet.pl" >Surprise</a></li>
     </ul>
-  <!--THIS MUST BE JQUERY -->
-    <script>
-      $( document ).ready(function() {
-        $( "a" ).click(function( event ) {
-          alert( "Thanks for visiting!" );
-        });
-      });
-    </script>
-    <img src="img/tlostrony.jpg" alt="Tło strony" />
+
+    <div class="parallax"></div>
 
     <div class='container'>
       <div class='header'>
@@ -51,7 +58,7 @@
       </div>
       <div>
         <img id="ispik" src="img/ispik.jpg" alt="ispik"/>
-        <div class='cv' style="width:40% float:right">
+        <div class='cv' style="width:40% float:right" >
           Doświadczenie:</br>
           Praktykant</br>
           ISPIK S.A.: praktyczne poszerzanie znajomości języków HTML5, CSS3, JavaScript i&#160;frameworku ExtJS, programowania obiektowego OOP, wzorca MVC,
@@ -60,7 +67,7 @@
       </div>
       <div>
         <img id="politechnika" src="img/politechnika.jpg" alt="politechnika"/>
-        <div class='cv' style="width:40%">
+        <div class='cv' style="width:40%" >
           Wykształcenie:</br>
           X 2013 – nadal </br>
           Politechnika Śląska,
@@ -90,8 +97,9 @@
           -gra na gitarze klasycznej i organach</br>
         </div>
       </div>
-      </br></br></br></br></br><a href="#top">Go to top</a></li>
+
     </div>
+  </br><a href="#top" id="footer" style="bottom: 1vh">Go to top</a>
 
   </body>
 </html>

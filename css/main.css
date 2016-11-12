@@ -3,74 +3,81 @@ html {
 }
 
 body {
+  margin: 0;
     color: #26242b;
     font-family: 'Open Sans', sans-serif;
 }
 ul {
+    top: 0;
     list-style-type: none;
-    margin: 0;
+    margin: auto;
     padding: 0;
-    overflow: auto;
-
+    overflow: hidden;
+    border: 0;
 }
 li {
     float: left;
+    border-right: 1px solid #bbb;
 }
 a {
   display: block;
-  padding: 1vw;
+  padding: 0.7vw;
+  text-align: center;
   color: #555;
 }
-
+li:last-child {
+    border-right: none;
+}
+@media screen and (max-width: 600px){
+    ul li.right,
+    ul li {float: none;}
+}
 img {
   display: block;
   margin: auto;
-  border-radius: 8px;
+  border-radius: 2vw;
   width: 100%;
 }
 #moje {
   display: block;
   margin: 13%;
-  border-radius: 8px;
-  width: 30%;
+  width: 20%;
   float: right;
 }
 #ispik {
   display: block;
   margin: 13%;
-  border-radius: 8px;
+  margin-top: 8%;
   width: 30%;
   float: left;
 }
 #politechnika {
   display: block;
   margin: 13%;
-  border-radius: 8px;
-  width: 30%;
-  float: right;
-}
-#bike {
-  display: block;
-  margin: 13%;
-  border-radius: 8px;
+  margin-top: 6%;
   width: 30%;
   float: right;
 }
 #notebook {
   display: block;
   margin: 13%;
-  border-radius: 8px;
   width: 30%;
   float: left;
+}
+#bike {
+  display: block;
+  margin: 13%;
+  margin-top: 6%;
+  width: 30%;
+  float: right;
 }
 .header {
   color: white;
   padding: 15px;
   font-size: 3vw;
   position: absolute;
-  top: 20vw;
+  top: 25vw;
   left: 10%;
-  width: 100%;
 }
 
 .container {
@@ -81,8 +88,14 @@ img {
 
 .cv {
   padding: 13%;
-
-  font-size: 2.2vw;
+  font-size: 1.8vw;
   font-weight: lighter;
+}
 
+#footer {
+    clear: both;
+    font-size: 1.8vw;
+    font-weight: lighter;
+    position: relative;
+    z-index: 10;
 }
