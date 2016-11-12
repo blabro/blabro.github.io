@@ -1,10 +1,25 @@
 html {
-  background-color: rgb(20, 22, 47);
+  background-color: #d7ceff;
 }
 
 body {
-    color: white;
+    color: #26242b;
     font-family: 'Open Sans', sans-serif;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+
+}
+li {
+    float: left;
+}
+a {
+  display: block;
+  padding: 1vw;
+  color: #555;
 }
 
 img {
@@ -15,31 +30,59 @@ img {
 }
 #moje {
   display: block;
-  margin: 10%;
+  margin: 13%;
   border-radius: 8px;
-  width: 20%;
+  width: 30%;
   float: right;
-
+}
+#ispik {
+  display: block;
+  margin: 13%;
+  border-radius: 8px;
+  width: 30%;
+  float: left;
+}
+#politechnika {
+  display: block;
+  margin: 13%;
+  border-radius: 8px;
+  width: 30%;
+  float: right;
+}
+#bike {
+  display: block;
+  margin: 13%;
+  border-radius: 8px;
+  width: 30%;
+  float: right;
+}
+#notebook {
+  display: block;
+  margin: 13%;
+  border-radius: 8px;
+  width: 30%;
+  float: left;
 }
 .header {
- padding: 15px;
- font-size: 38px;
- position: absolute;
- top: 50%;
- left: 10%;
- width: 100%;
-
+  color: white;
+  padding: 15px;
+  font-size: 3vw;
+  position: absolute;
+  top: 20vw;
+  left: 10%;
+  width: 100%;
 }
 
 .container {
-  width: 100%;
-  float: left;
+  width: 90%;
+  align: center;
   margin: auto;
 }
 
 .cv {
-  padding: 10%;
-  font-size: 26px;
+  padding: 13%;
+  
+  font-size: 2.2vw;
   font-weight: lighter;
 
 }
