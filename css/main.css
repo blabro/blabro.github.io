@@ -4,46 +4,54 @@ html {
 
 body {
   margin: 0;
-    color: #26242b;
-    font-family: 'Open Sans', sans-serif;
+  color: #26242b;
+  font-family: 'Open Sans', sans-serif;
 }
+
 ul {
-    top: 0;
-    list-style-type: none;
-    margin: auto;
-    padding: 0;
-    overflow: hidden;
-    border: 0;
+  top: 0;
+  list-style-type: none;
+  margin: auto;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
 }
+
 li {
-    float: left;
-    border-right: 1px solid #bbb;
+  float: left;
+  border-right: 1px solid #bbb;
 }
 a {
+  text-decoration: none;
   display: block;
   padding: 0.7vw;
   text-align: center;
   color: #555;
 }
+
 li:last-child {
-    border-right: none;
+  border-right: none;
 }
+
 @media screen and (max-width: 600px){
-    ul li.right,
-    ul li {float: none;}
+  ul li.right,
+  ul li {float: none;}
 }
+
 img {
   display: block;
   margin: auto;
   border-radius: 2vw;
   width: 100%;
 }
+
 #moje {
   display: block;
   margin: 13%;
   width: 20%;
   float: right;
 }
+
 #ispik {
   display: block;
   margin: 13%;
@@ -51,19 +59,22 @@ img {
   width: 30%;
   float: left;
 }
+
 #politechnika {
   display: block;
   margin: 13%;
-  margin-top: 6%;
+  margin-top: 8%;
   width: 30%;
   float: right;
 }
+
 #notebook {
   display: block;
   margin: 13%;
   width: 30%;
   float: left;
 }
+
 #bike {
   display: block;
   margin: 13%;
@@ -71,6 +82,7 @@ img {
   width: 30%;
   float: right;
 }
+
 .header {
   color: white;
   padding: 15px;
@@ -93,9 +105,9 @@ img {
 }
 
 #footer {
-    clear: both;
-    font-size: 1.8vw;
-    font-weight: lighter;
-    position: relative;
-    z-index: 10;
+  clear: both;
+  font-size: 1.8vw;
+  font-weight: lighter;
+  position: relative;
+  z-index: 10;
 }
