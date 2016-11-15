@@ -10,7 +10,7 @@ app.directive('scrollOnClick', function() {
     restrict: 'A',
     link: function(scope, $elm) {
       $elm.on('click', function() {
-console.log('scrollonclick???');        
+console.log('scrollonclick???');
         $("body").animate({scrollTop: $elm.offset().top}, "slow");
       });
     }
@@ -22,51 +22,50 @@ $( document ).ready(function() {
   $( "#moje" ).click(function( event ) {
     alert( "Well HELLO Human!" );
   });
+  $("a[href='#angular']").mouseover(function(){
+    $("html, body").addClass('animated infinite shake');
+  });
+  $("a[href='#angular']").click(function(){
+    $("html, body").removeClass('animated infinite shake');
+  });
+
   $("a[href='#top']").click(function() {
     $("html, body").animate({ scrollTop: 0 }, "slow");
   });
   $("a[href='#cv']").click(function() {
     $("html, body").animate({ scrollTop: $(".cv").position().top }, "slow");
-    $("html, body").addClass('animated fadeIn');
+    $("html, body").addClass('animated bounceInUp');
     setTimeout(function () {
-        $("html, body").removeClass('animated fadeIn');
+        $("html, body").removeClass('animated bounceInUp');
     }, 700);
   });
 
-  $("a[href='#angular']").mouseover(function(){
-    $("html, body").addClass('animated shake');
-    setTimeout(function () {
-        $("html, body").removeClass('animated shake');
-    }, 200);
-  });
-
-
   $("a[href='#experience']").click(function() {
     $("html, body").animate({ scrollTop: $(".experience").position().top }, "slow");
-    $("html, body").addClass('animated rollIn');
+    $("html, body").addClass('animated bounceInUp');
     setTimeout(function () {
-        $("html, body").removeClass('animated rollIn');
+        $("html, body").removeClass('animated bounceInUp');
     }, 700);
   });
   $("a[href='#studies']").click(function() {
     $("html, body").animate({ scrollTop: $(".studies").position().top }, "slow");
-    $(".studies").addClass('animated shake');
+    $(".studies").addClass('animated bounceInUp');
     setTimeout(function () {
-        $(".studies").removeClass('animated shake');
+        $(".studies").removeClass('animated bounceInUp');
     }, 700);
   });
   $("a[href='#skills']").click(function() {
     $("html, body").animate({ scrollTop: $(".skills").position().top }, "slow");
-    $(".skills").addClass('animated fadeInRight');
+    $(".skills").addClass('animated bounceInUp');
     setTimeout(function () {
-        $(".skills").removeClass('animated fadeInRight');
+        $(".skills").removeClass('animated bounceInUp');
     }, 900);
   });
   $("a[href='#hobby']").click(function() {
     $("html, body").animate({ scrollTop: $(".hobby").position().top }, "slow");
-    $(".hobby").addClass('animated zoomInUp');
+    $(".hobby").addClass('animated bounceInUp');
     setTimeout(function () {
-        $(".hobby").removeClass('animated zoomInUp');
+        $(".hobby").removeClass('animated bounceInUp');
     }, 700);
   });
   $("a[href='#footer']").click(function() {
