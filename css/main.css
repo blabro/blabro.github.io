@@ -1,5 +1,5 @@
 html {
-  background-color: #eeeeee;
+  background-color: white;
 }
 
 body {
@@ -52,10 +52,11 @@ img {
   float: right;
 }
 
+
 #ispik {
   display: block;
   margin: 13%;
-  margin-top: 8%;
+  margin-top: 1%;
   width: 30%;
   float: left;
 }
