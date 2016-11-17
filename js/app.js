@@ -1,24 +1,15 @@
-var app = angular.module('myApp', []);
-
-app.controller('MainCtrl', function($scope) {
-  $scope.items = [];
-  for (var i=0; i<100; i++) { $scope.items.push(i); }
-});
-
-app.directive('scrollOnClick', function() {
-  return {
-    restrict: 'A',
-    link: function(scope, $elm) {
-      $elm.on('click', function() {
-console.log('scrollonclick???');
-        $("body").animate({scrollTop: $elm.offset().top}, "slow");
-      });
-    }
-  }
-});
 
 <!--THIS MUST BE JQUERY -->
 $( document ).ready(function() {
+  $(window).scroll(function () {
+  var s = $(window).scrollTop(),
+        d = $(document).height(),
+        c = $(window).height();
+        scrollPercent = (s / (d-c)) * 100;
+        var position = scrollPercent;
+   $("#progressbar").attr('value', position);
+});
+
   $( "#moje" ).click(function( event ) {
     alert( "Well HELLO Human!" );
   });

@@ -1,32 +1,26 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" ng-app="APP">
   <head>
     <meta charset="UTF-8">
     <title>Broncel Błażej a nie index.html</title>
     <link href="css/main.css" rel="stylesheet" />
     <link href="css/animate.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/jquery-3.1.1.js"></script>
     <!--This is undoubtedly angular!-->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-    <style>
-    .parallax {
-        /* The image used */
-        background-image: url("img/tlostrony.jpg");
-        /* Set a specific height */
-        min-height: 800px;
-        /* Create the parallax scrolling effect */
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.min.js"></script>
+
   </head>
 
-  <body ng-app="myApp">
+  <body ng-controller="basicCtrl">
     <script src="js/app.js"></script>
-<!--
+    <script src="js/angular.min.js"></script>
+    <script src="js/myangular.js"></script>
+    <script src="js/angular-inview.js"></script>
+
+    <progress id="progressbar" value="0" max="100"></progress>
+<!-- Horizontal / Vertical menu
     <ul>
       <li><a href="#c">IN</a></li>
       <li><a href="#js">the</a></li>
@@ -35,9 +29,10 @@
       <li style="float:right" ><a href="http://9gag.com/timely?ref=9nav" >Surprise</a></li>
     </ul>
 -->
+
     <a href="#cv"><div class="parallax"></div></a>
 
-    <div class='container'>
+    <div class='container' ng-repeat="t in #cv" in-view="divInView($index)">
       <div class='header'>
         <h2>Broncel Błażej</h2>
         <h3>Krótka prezentacja o sobie</h3>
@@ -51,7 +46,6 @@
             Adres zamieszkania: </br>
             41-100 Gliwice </br>
             Kochanowskiego 37 </br>
-
             Data urodzenia: 25.05.1994r.</br>
             Telefon: 792 535 551</br>
             E-mail: blabro@o2.pl</br>

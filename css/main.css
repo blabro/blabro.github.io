@@ -1,7 +1,43 @@
 html {
   background-color: white;
 }
+progress[value] {
+    -webkit-appearance: none;
+     appearance: none;
 
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 10px;
+}
+.parallax {
+    /* The image used */
+    background-image: url("../img/tlostrony.jpg");
+    /* Set a specific height */
+    min-height: 800px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+progress[value]::-webkit-progress-bar {
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+progress[value]::-webkit-progress-value {
+  background-image:
+	   -webkit-linear-gradient(-30deg,
+	                           transparent 33%, rgba(0, 0, 0, .1) 33%,
+	                           rgba(0,0, 0, .1) 66%, transparent 66%),
+	   -webkit-linear-gradient(top,
+	                           rgba(255, 255, 255, .25),
+	                           rgba(0, 0, 0, .25)),
+	   -webkit-linear-gradient(left, #09c, #f44);
+    border-radius: 2px;
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+}
 body {
   margin: 0;
   color: #26242b;
