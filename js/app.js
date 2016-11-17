@@ -25,17 +25,17 @@ $( document ).ready(function() {
   });
   $("a[href='#cv']").click(function() {
     $("html, body").animate({ scrollTop: $(".cv").position().top }, "slow");
-    $("html, body").addClass('animated bounceInUp');
+    $(".contact").addClass('animated bounceInUp');
     setTimeout(function () {
-        $("html, body").removeClass('animated bounceInUp');
+        $(".contact").removeClass('animated bounceInUp');
     }, 700);
   });
 
   $("a[href='#experience']").click(function() {
     $("html, body").animate({ scrollTop: $(".experience").position().top }, "slow");
-    $("html, body").addClass('animated bounceInUp');
+    $(".experience").addClass('animated bounceInUp');
     setTimeout(function () {
-        $("html, body").removeClass('animated bounceInUp');
+        $(".experience").removeClass('animated bounceInUp');
     }, 700);
   });
   $("a[href='#studies']").click(function() {
