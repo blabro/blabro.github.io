@@ -1,31 +1,35 @@
 html {
   background-color: white;
 }
+
 progress[value] {
     -webkit-appearance: none;
-     appearance: none;
-
+    appearance: none;
     position: fixed;
     top: 0;
     width: 100%;
     height: 10px;
 }
+
 .parallax {
     /* The image used */
-    background-image: url("../img/tlostrony.jpg");
+    background-image: url("../img/tlostrony1.jpg");
     /* Set a specific height */
-    min-height: 800px;
+    min-height: 750px ;
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
+    background-position: 0 1px;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 progress[value]::-webkit-progress-bar {
   background-color: #fff;
   border-radius: 2px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
 }
+
 progress[value]::-webkit-progress-value {
   background-image:
 	   -webkit-linear-gradient(-30deg,
@@ -38,6 +42,7 @@ progress[value]::-webkit-progress-value {
     border-radius: 2px;
     background-size: 35px 20px, 100% 100%, 100% 100%;
 }
+
 body {
   margin: 0;
   color: #26242b;
@@ -57,6 +62,7 @@ li {
   float: left;
   border-right: 1px solid #bbb;
 }
+
 a {
   text-decoration: none;
   display: block;
@@ -74,50 +80,40 @@ li:last-child {
   ul li {float: none;}
 }
 
+.cv {
+  padding: 13%;
+  font-size: 1.8vw;
+  font-weight: lighter;
+  text-align: left;
+}
+
 img {
   display: block;
   margin: auto;
-  border-radius: 2vw;
   width: 100%;
+  position: relative;
+  z-index: -2;
 }
 
-#moje {
+div#imageright {
+  display: block;
+  margin: 13%;
+  width: 35%;
+  float: right;
+  box-shadow: 0 0 20px 20px white inset;
+}
+
+div#imageleft {
   display: block;
   margin: 13%;
   width: 20%;
-  float: right;
-}
-
-
-#ispik {
-  display: block;
-  margin: 13%;
-  margin-top: 1%;
-  width: 30%;
   float: left;
+  box-shadow: 0 0 20px 20px white inset;
 }
 
-#politechnika {
-  display: block;
-  margin: 13%;
-  margin-top: 8%;
-  width: 30%;
-  float: right;
-}
-
-#notebook {
-  display: block;
-  margin: 13%;
-  width: 30%;
-  float: left;
-}
-
-#bike {
-  display: block;
-  margin: 13%;
-  margin-top: 6%;
-  width: 30%;
-  float: right;
+.fadingIn
+{
+    opacity: 0;
 }
 
 .header {
@@ -133,12 +129,6 @@ img {
   width: 100%;
   align: center;
   margin: 0;
-}
-
-.cv {
-  padding: 13%;
-  font-size: 1.8vw;
-  font-weight: lighter;
 }
 
 #footer {

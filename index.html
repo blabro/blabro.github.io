@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl" ng-app="APP">
+<html lang="pl">
   <head>
     <meta charset="UTF-8">
     <title>Broncel Błażej a nie index.html</title>
@@ -8,17 +8,12 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <script src="js/jquery-3.1.1.js"></script>
     <!--This is undoubtedly angular!-->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.min.js"></script>
-
-  </head>
-
-  <body ng-controller="basicCtrl">
-    <script src="js/app.js"></script>
     <script src="js/angular.min.js"></script>
     <script src="js/myangular.js"></script>
-    <script src="js/angular-inview.js"></script>
+  </head>
 
+  <body ng-app="APP">
+    <script src="js/app.js"></script>
     <progress id="progressbar" value="0" max="100"></progress>
 <!-- Horizontal / Vertical menu
     <ul>
@@ -30,82 +25,104 @@
     </ul>
 -->
 
-    <a href="#cv"><div class="parallax"></div></a>
+    <a href="#contact"><div class="parallax"></div></a>
 
-    <div class='container' ng-repeat="t in #cv" in-view="divInView($index)">
+    <div class='container' scroll-Container>
       <div class='header'>
         <h2>Broncel Błażej</h2>
         <h3>Krótka prezentacja o sobie</h3>
       </div>
 
-      <div class='contact'>
-        <a href="#experience">
-          <img id="moje" src="img/moje.jpg" alt="moje"/>
-          <div class='cv'>
-            Broncel Błażej </br>
-            Adres zamieszkania: </br>
-            41-100 Gliwice </br>
-            Kochanowskiego 37 </br>
-            Data urodzenia: 25.05.1994r.</br>
-            Telefon: 792 535 551</br>
-            E-mail: blabro@o2.pl</br>
-          </div>
-        </a>
+      <div class='fadingIn'>
+        <div class='contact'>
+          <a href="#experience">
+            <div >
+              <div id="imageright" style="width:20%">
+                <img id="moje" src="img/moje.jpg" alt="moje"/>
+              </div>
+            </div>
+            <div class='cv' style="margin:4%">
+              Broncel Błażej </br>
+              Adres zamieszkania: </br>
+              41-100 Gliwice </br>
+              Kochanowskiego 37 </br>
+              Data urodzenia: 25.05.1994r.</br>
+              Telefon: 792 535 551</br>
+              E-mail: blabro@o2.pl</br>
+            </div>
+          </a>
+        </div>
       </div>
 
-      <div class='experience'>
-        <a href="#studies">
-          <img id="ispik" src="img/ispik.jpg" alt="ispik"/>
-          <div class='cv' style="width:40% float:right" >
-            Doświadczenie:</br>
-            Praktykant</br>
-            ISPIK S.A.: praktyczne poszerzanie znajomości języków HTML5, CSS3, JavaScript i&#160;frameworku ExtJS, programowania obiektowego OOP, wzorca MVC,
-            modelowania UML, testowania jednostkowgo Jasmine, języka znaczników Markdown
-          </div>
-        </a>
-      </div>
-      <div class='studies'>
-        <a href="#skills">
-          <img id="politechnika" src="img/politechnika.jpg" alt="politechnika"/>
-          <div class='cv' style="width:40%" >
-            Wykształcenie:</br>
-            X 2013 – nadal </br>
-            Politechnika Śląska,
-            Wydział Automatyki, Elektroniki i Informatyki,
-            kierunek: makrokierunek (automatyka i&#160;robotyka, elektronika i&#160;telekomunikacja, informatyka) w&#160;języku angielskim,
-            tryb: stacjonarne</br>
-            IX 2010 – VI 2013 </br>
-            I Liceum Ogólnokształcące
-            im. Leona Kruczkowskiego w Tychach
-          </div>
-        </a>
+      <div class='fadingIn'>
+        <div class='experience'>
+          <a href="#studies">
+            <div id="imageleft">
+              <img id="ispik" src="img/ispik.png" alt="ispik"/>
+            </div>
+            <div class='cv' style="width:40% float:right" >
+              Doświadczenie:</br></br>
+              Praktykant</br>
+              ISPIK S.A.: praktyczne poszerzanie znajomości języków HTML5, CSS3, JavaScript i&#160;frameworku ExtJS, programowania obiektowego OOP, wzorca MVC,
+              modelowania UML, testowania jednostkowgo Jasmine, języka znaczników Markdown
+            </div>
+          </a>
+        </div>
       </div>
 
-      <div class='skills'>
-        <a href="#hobby">
-          <img id="notebook" src="img/notebook.jpg" alt="notebook"/>
-          <div class='cv' style="width:40% float:right">
-            Umiejętności:</br>
-            -Języki obce angielski (zaawansowany)</br>
-            -Programowanie C, C++ (podstawy), środowisko QT Creator, Visual Studio, kurs SQL, samodzielna nauka AngularJS, kurs C# grupy .NET Politechnika Śląska
-          </div>
-        </a>
+      <div class='fadingIn'>
+        <div class='studies'>
+          <a href="#skills">
+            <div id="imageright">
+              <img id="politechnika" src="img/politechnika.jpg" alt="politechnika"/>
+            </div>
+            <div class='cv' style="width:40%" >
+              Wykształcenie:</br>
+              X 2013 – nadal </br>
+              •Politechnika Śląska,
+              Wydział Automatyki, Elektroniki i Informatyki,
+              kierunek: makrokierunek (automatyka i&#160;robotyka, elektronika i&#160;telekomunikacja, informatyka) w&#160;języku angielskim,
+              tryb: stacjonarne</br>
+              IX 2010 – VI 2013 </br>
+              •I Liceum Ogólnokształcące
+              im. Leona Kruczkowskiego w Tychach
+            </div>
+          </a>
+        </div>
       </div>
 
-      <div class='hobby'>
-        <a href="#footer">
-          <img id="bike" src="img/bike.jpg" alt="bike"/>
-          <div class='cv'>
-            Zainteresowania:</br>
-            -muzyka</br>
-			      -gitara klasyczna: ukończenie Państwowej Szkoły Muzycznej I stopnia w Tychach</br>
-			      -organy: ukończenie Studium Organistowskiego Archidiecezji Katowickiej</br>
-          </div>
-        </a>
+      <div class='fadingIn'>
+        <div class='skills'>
+          <a href="#hobby">
+            <div id="imageleft">
+              <img id="notebook" src="img/notebook.jpg" alt="notebook"/>
+            </div>
+            <div class='cv' style="width:40% float:right">
+              Umiejętności:</br>
+              -Języki obce angielski (zaawansowany)</br>
+              -Programowanie C, C++ (podstawy), środowisko QT Creator, Visual Studio, kurs SQL, samodzielna nauka AngularJS, kurs C# grupy .NET Politechnika Śląska
+            </div>
+          </a>
+        </div>
       </div>
 
+      <div class='fadingIn'>
+        <div class='hobby'>
+          <a href="#footer">
+            <div id="imageright" style="margin-top:0%">
+              <img id="bike" src="img/bike.jpg" alt="bike"/>
+            </div>
+            <div class='cv' style="width:40%" >
+              Zainteresowania:</br>
+              -muzyka</br>
+  			      -gitara klasyczna: ukończenie Państwowej Szkoły Muzycznej I stopnia w Tychach</br>
+  			      -organy: ukończenie Studium Organistowskiego Archidiecezji Katowickiej</br>
+            </div>
+          </a>
+        </div>
+      </div>
     </div>
-  </br><a href="#top" id="footer" style="bottom: 1vh">Idź w górę</a>
 
+  </br><a href="#top" id="footer" style="bottom: 1vh">Idź w górę</a>
   </body>
 </html>

@@ -1,11 +1,21 @@
-angular.module('basicCtrl', ['angular-inview']).controller('basicCtrl', function basicCtrl ($scope, $sce) {
+angular
+    .module('APP', [])
+    .directive('scrollContainer', scrollContainer)
 
-
-  $scope.inviewLogs = [];
-  $scope.divInView = function(index) {
-    Console.log("jestem w module");
-    $scope.inviewLogs.unshift({ id: logId++, message: $sce.trustAsHtml('Line <em>#' + index + '</em>: ' ) });
-    console.log($scope.inviewLogs.unshift({ message: $sce.trustAsHtml('Line <em>#' + index + '</em>: ')}));
-    return false;
-  }
-});
+function scrollContainer($window) {
+    return {
+        restrict: 'A',
+        scope: true,
+        link: function(scope, element, attrs) {
+            angular.element($window).bind("scroll", function() {
+                $('.fadingIn').each( function(i){
+                    var bottom_of_object = $(this).offset().top + $(this).outerHeight()*3/4;
+                    var bottom_of_window = $(window).scrollTop() + $(window).height();
+                    if( bottom_of_window > bottom_of_object ){
+                        $(this).animate({'opacity':'1'},500);
+                    }
+               });
+           });
+        }
+    }
+}
