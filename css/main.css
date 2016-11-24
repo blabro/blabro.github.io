@@ -49,20 +49,6 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-ul {
-  top: 0;
-  list-style-type: none;
-  margin: auto;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
-}
-
-li {
-  float: left;
-  border-right: 1px solid #bbb;
-}
-
 a {
   text-decoration: none;
   display: block;
@@ -71,49 +57,80 @@ a {
   color: #555;
 }
 
-li:last-child {
-  border-right: none;
-}
 
-@media screen and (max-width: 600px){
-  ul li.right,
-  ul li {float: none;}
+.vertical-row {
+  visibility: hidden;
 }
 
 .cv {
-  padding: 13%;
-  font-size: 1.8vw;
+  margin: auto;
+  padding: auto;
+  max-width: 60%;
+  font-size: 14px;
   font-weight: lighter;
   text-align: left;
+  display: inline-block;
 }
 
+.centerin {
+  margin: auto;
+  padding: auto;
+  width:90%;
+  text-align: center;
+  border: 0px solid green;
+}
 img {
-  display: block;
   margin: auto;
   width: 100%;
   position: relative;
   z-index: -2;
 }
-
-div#imageright {
-  display: block;
-  margin: 13%;
-  width: 35%;
-  float: right;
+div#image {
+  display: inline-block;
+  margin: 10%;
+  width: 60%;
+  box-shadow: 0 0 20px 20px white inset;
+}
+div#imageLandscape {
+  display: inline-block;
+  margin: 10%;
+  width: 60%;
   box-shadow: 0 0 20px 20px white inset;
 }
 
-div#imageleft {
-  display: block;
-  margin: 13%;
-  width: 20%;
-  float: left;
-  box-shadow: 0 0 20px 20px white inset;
+@media screen and (orientation: landscape) {
+
+  .vertical-row {
+    visibility: visible;
+    min-height: 15em;
+    padding: auto;
+    width: 2px;
+    background-color: grey;
+    display: inline-block;
+  }
+  .cv {
+    margin: 5%;
+    font-size: 1.5vw;
+    max-width: 40%;
+    display: inline-block;
+  }
+  div#image {
+    display: inline-block;
+    width: 20%;
+  }
+  div#imageLandscape {
+    width: 30%;
+    height: auto;
+    margin: 5%;
+    display: inline-block;
+  }
 }
 
 .fadingIn
 {
-    opacity: 0;
+  opacity: 0;
+  overflow: auto;
+  width: 100%;
 }
 
 .header {
@@ -123,6 +140,14 @@ div#imageleft {
   position: absolute;
   top: 25vw;
   left: 10%;
+}
+
+.up {
+  color: white;
+  padding: 1% 44%;
+  font-size: 3vw;
+  position: absolute;
+  bottom: 0vw;
 }
 
 .container {
