@@ -13,7 +13,7 @@ progress[value] {
 
 .parallax {
     /* The image used */
-    background-image: url("../img/tlostrony1.jpg");
+    background-image: url("../img/tlostrony.jpg");
     /* Set a specific height */
     min-height: 750px ;
     /* Create the parallax scrolling effect */
@@ -116,6 +116,8 @@ div#imageLandscape {
   div#image {
     display: inline-block;
     width: 20%;
+    height: auto;
+    margin: 5%;
   }
   div#imageLandscape {
     width: 30%;
