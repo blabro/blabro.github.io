@@ -12,7 +12,7 @@ progress[value] {
 }
 
 #loader {
-  position: relative;
+  position: absolute;
   left: 50%;
   top: 50%;
   z-index: 1;
@@ -24,8 +24,8 @@ progress[value] {
   border-top: 16px solid #09c;
   width: 120px;
   height: 120px;
-  -webkit-animation: spin 0.3s linear infinite;  /* Safari */
-  animation: spin 0.3s linear infinite;
+  -webkit-animation: spin 1s linear infinite;  /* Safari */
+  animation: spin 1s linear infinite;
 }
 
 @-webkit-keyframes spin {
