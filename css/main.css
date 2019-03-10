@@ -37,6 +37,10 @@ progress[value] {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+#myDiv {
+  display: none;
+  text-align: center;
+}
 .parallax {
     /* The image used */
     background-image: url("../img/tlostrony2.jpg");
