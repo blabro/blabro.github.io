@@ -38,7 +38,7 @@ function animatescrollandbounceInUp(hrefName, className) {
 var myVar;
 
 function myFunction() {
-  myVar = setTimeout(showPage, 1500);
+  myVar = setTimeout(showPage, 500);
 }
 
 function showPage() {
