@@ -12,12 +12,11 @@
     <script async src="js/app.js"></script>
   </head>
   
-  <div id="loader"></div>
   
-  <body ng-app="APP" onload="myFunction()" style="display:none;" id="myDiv" >
+  <body ng-app="APP" onload="myFunction()">
     <progress id="progressbar" value="0" max="100"></progress>
-    
-    <a href="#contact"><div class="parallax"></div></a>
+    <div id="loader" style="position:relative;"></div>    
+    <a href="#contact"><div class="parallax" style="display:none;" id="myDiv"></div></a>
 
     <div class='container' scroll-Container>
       <div class='header'>
