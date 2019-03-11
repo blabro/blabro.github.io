@@ -22,8 +22,6 @@ progress[value] {
   border: 16px solid #f3f3f3;
   border-radius: 50%;
   border-top: 16px solid #09c;
-  width: 120px;
-  height: 120px;
   -webkit-animation: spin 1s linear infinite;  /* Safari */
   animation: spin 1s linear infinite;
 }
@@ -45,7 +43,7 @@ progress[value] {
     /* The image used */
     background-image: url("../img/tlostrony2.jpg");
     /* Set a specific height */
-    min-height: 750px ;
+    min-height: 100%;
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
