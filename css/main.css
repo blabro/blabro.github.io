@@ -43,7 +43,7 @@ progress[value] {
     /* The image used */
     background-image: url("../img/tlostrony1.jpg");
     /* Set a specific height */
-    min-height: 95%;
+    min-height: 85%;
     /* Create the parallax scrolling effect */
      background-attachment: fixed;
      background-position: center;
