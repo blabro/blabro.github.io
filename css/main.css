@@ -3,6 +3,7 @@ html {
 }
 
 progress[value] {
+    z-index: 1;
     -webkit-appearance: none;
     appearance: none;
     position: fixed;
@@ -11,46 +12,29 @@ progress[value] {
     height: 10px;
 }
 
-#loader {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  z-index: 1;
-  width: 150px;
-  height: 150px;
-  margin: -75px 0 0 -75px;
-  border: 16px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 16px solid #09c;
-  -webkit-animation: spin 1s linear infinite;  /* Safari */
-  animation: spin 1s linear infinite;
-}
-
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-#myDiv {
-  display: none;
-  text-align: center;
-}
 .parallax {
     /* The image used */
-    background-image: url("../img/tlostrony1.jpg");
+    /*background-image: url("../img/tlostrony2.jpg");*/
     /* Set a specific height */
-    min-height: 100vh;
+    
     /* Create the parallax scrolling effect */
-     background-attachment: fixed;
-     background-position: center;
-     background-repeat: no-repeat;
-     background-size: cover;
-}
+    background-attachment: fixed;
+    background-position: center;
+    background-position: 0 1px;
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
 
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  width:100%;
+  backface-visibility:visible;
+}
+#overlay {
+  background-color:rgba(0,0,0,.65);
+  z-index: -1;
+  position: relative;
+}
 progress[value]::-webkit-progress-bar {
   background-color: #fff;
   border-radius: 2px;
@@ -161,7 +145,7 @@ div#imageLandscape {
   width: 100%;
 }
 
-.header {
+#header {
   color: white;
   padding: 15px;
   font-size: 3vw;
@@ -180,7 +164,6 @@ div#imageLandscape {
 
 .container {
   width: 100%;
-  align: center;
   margin: 0;
 }
 

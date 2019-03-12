@@ -9,21 +9,27 @@
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.9/angular.min.js"></script>
     <script async src="js/myangular.js"></script>
-    <script async src="js/app.js"></script>
   </head>
-  
-  
-  <body ng-app="APP" onload="myFunction()">
-    <progress id="progressbar" value="0" max="100"></progress>
-    <div id="loader"></div>    
-    <a href="#contact"><div class="parallax" style="display:none;" id="myDiv"></div></a>
 
-    <div class='container' scroll-Container>
-      <div class='header'>
-        <h1>Broncel Błażej</h1>
-        <h3>Krótka prezentacja o sobie</h3>
+  <body ng-app="APP">
+    <script async src="js/app.js"></script>
+    <progress id="progressbar" value="0" max="100"></progress>
+    <div id="overlay">
+          
+      </div><a href="#contact"> 
+        <video autoplay muted loop id="myVideo" >
+          <source src="img/video1.mp4" type="video/mp4">
+        </video>
+      </a>
+
+      <div class='container' scroll-Container>
+        <div id='header'>
+          <h1>Broncel Błażej</h1>
+          <h3>Krótka prezentacja o sobie</h3>
+        </div>
       </div>
 
+    </div>
       <div class='fadingIn'>
         <div class='contact'>
           <div class='centerin'>
@@ -56,9 +62,10 @@
               <div class='vertical-row'></div>
               <div class='cv'>
                 Doświadczenie:</br></br>
-                Praktykant</br>
-                ISPIK S.A.: praktyczne poszerzanie znajomości języków HTML5, CSS3, JavaScript i&#160;frameworku ExtJS, programowania obiektowego OOP, wzorca MVC,
-                modelowania UML, testowania jednostkowgo Jasmine, języka znaczników Markdown
+                Infrastructure Engineer: troubleshooting aplikacji, analiza i rozwiązywanie problemów systemów Windows</br>
+                Tester manualny: testy aplikacji z narzędziem Katalon, tworzenie raportów MSSQL Server </br>
+                Praktykant: ISPIK S.A.: praktyczne poszerzanie znajomości języków HTML5, CSS3, JavaScript i&#160;frameworku ExtJS, programowania obiektowego OOP, wzorca MVC,
+                
               </div>
             </a>
           </div>
