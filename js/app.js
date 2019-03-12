@@ -1,6 +1,16 @@
-
-<!--THIS MUST BE JQUERY -->
+//<!--THIS MUST BE JQUERY -->
 $( document ).ready(function() {
+  $(window).on('load scroll', function () {
+    var scrolled = $(this).scrollTop();
+    $('#myVideo').css('transform', 'translate3d(0, ' + -(scrolled * 0.45) + 'px, 0)');
+    $('#header').css({
+      'transform': 'translate3d(0, ' + -(scrolled * 0.2) + 'px, 0)', // parallax (20% scroll rate)
+      'opacity': 1 - scrolled / 400 // fade out at 400px from top
+    });
+    console.log(scrolled, '123');
+  });
+
+
   $(window).scroll(function () {
   var s = $(window).scrollTop(),
         d = $(document).height(),
@@ -34,14 +44,3 @@ function animatescrollandbounceInUp(hrefName, className) {
       }, 700);
     });
 };
-
-var myVar;
-
-function myFunction() {
-  myVar = setTimeout(showPage, 500);
-}
-
-function showPage() {
-  document.getElementById("loader").style.display = "none";
-  document.getElementById("myDiv").style.display = "block";
-}
