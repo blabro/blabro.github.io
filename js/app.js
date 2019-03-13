@@ -44,3 +44,14 @@ function animatescrollandbounceInUp(hrefName, className) {
       }, 700);
     });
 };
+
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 100);
+}
+
+function showPage() {
+  document.getElementById("loadersmall").style.display = "none";
+  document.getElementById("overlay").style.display = "block";
+}
